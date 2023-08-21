@@ -2,7 +2,7 @@ import React from 'react';
 
 const NavBar = () => {
     return (
-        <div className="navbar">
+        <div className="navbar bg-neutral sticky top-0 border-b-2 border-info z-30 backdrop-blur bg-transparent shadow-lg">
             <div className="navbar-start">
                 <div className="dropdown">
                     <label tabIndex={0} className="btn btn-ghost lg:hidden">
@@ -13,7 +13,7 @@ const NavBar = () => {
                         <li><a>Item 2</a></li>
                     </ul>
                 </div>
-                <a className="btn btn-ghost normal-case text-xl">daisyUI</a>
+                <a className="btn btn-info btn-outline normal-case text-xl">Swift PC Construct</a>
             </div>
             <div className="navbar-center hidden lg:flex">
                 <ul className="menu menu-horizontal px-1">
@@ -31,7 +31,7 @@ const NavBar = () => {
                 </ul>
             </div>
             <div className="navbar-end">
-                <a className="btn btn-info btn-outline">PC Builder</a>
+                <a className="btn btn-info btn-outline normal-case ">PC Builder</a>
             </div>
         </div>
     );
