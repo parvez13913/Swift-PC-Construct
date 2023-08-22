@@ -26,10 +26,29 @@ const NavBar = () => {
                     <li><a>Item 1</a></li>
                     <li tabIndex={0}>
                         <details>
-                            <summary>Parent</summary>
+                            <summary>Categories</summary>
                             <ul className="p-2">
-                                <li><a>Submenu 1</a></li>
-                                <li><a>Submenu 2</a></li>
+                                <li>
+                                    <a>CPU</a>
+                                </li>
+                                <li>
+                                    <a>Motherboard</a>
+                                </li>
+                                <li>
+                                    <a>RAM</a>
+                                </li>
+                                <li>
+                                    <a>Power Supply Unit</a>
+                                </li>
+                                <li>
+                                    <a>Storage Device</a>
+                                </li>
+                                <li>
+                                    <a>Monitor</a>
+                                </li>
+                                <li>
+                                    <a>Others</a>
+                                </li>
                             </ul>
                         </details>
                     </li>
@@ -37,7 +56,9 @@ const NavBar = () => {
                 </ul>
             </div>
             <div className="navbar-end">
-                <a className="btn btn-info btn-outline normal-case ">PC Builder</a>
+                <Link
+                    href="/builder/pcbuilder"
+                    className="btn btn-info btn-outline normal-case ">PC Builder</Link>
             </div>
         </div>
     );

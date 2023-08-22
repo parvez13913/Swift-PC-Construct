@@ -1,5 +1,5 @@
 import Image from "next/image";
-import notfoundImage from '@/images/not-found.png'
+import notfoundImage from '../images/not-found.png'
 import { useRouter } from "next/router";
 import Head from "next/head";
 import Link from "next/link";

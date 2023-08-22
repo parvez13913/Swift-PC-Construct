@@ -1,4 +1,5 @@
-import RootLayout from "@/components/shared/Layouts/RootLayout";
+import RootLayout from "../components/shared/Layouts/RootLayout";
+
 
 const HomePage = () => {
   return (
