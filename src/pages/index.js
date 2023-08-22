@@ -2,7 +2,7 @@ import RootLayout from "@/components/shared/Layouts/RootLayout";
 
 const HomePage = () => {
   return (
-    <div>
+    <div className="min-h-screen">
       <h1>This is Home page</h1>
     </div>
   );

@@ -1,4 +1,5 @@
-import React from 'react';
+import Link from "next/link";
+import { BsDisplayFill } from "react-icons/bs";
 
 const NavBar = () => {
     return (
@@ -13,7 +14,12 @@ const NavBar = () => {
                         <li><a>Item 2</a></li>
                     </ul>
                 </div>
-                <a className="btn btn-info btn-outline normal-case text-xl">Swift PC Construct</a>
+                <Link
+                    href="/"
+                    className="btn btn-info btn-outline normal-case text-xl">
+                    <BsDisplayFill />
+                    Swift PC Construct
+                </Link>
             </div>
             <div className="navbar-center hidden lg:flex">
                 <ul className="menu menu-horizontal px-1">
