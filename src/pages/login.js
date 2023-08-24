@@ -1,31 +1,21 @@
+/* eslint-disable @next/next/no-img-element */
 import Head from 'next/head';
-import { FaGoogle, FaGithub } from "react-icons/fa6";
 import RootLayout from '../components/shared/Layouts/RootLayout';
+import LoginForm from '../components/Ui/LoginForm';
+import loginImage from '../images/login.png'
+import Image from 'next/image';
 
 const LoginPage = () => {
     return (
-        <div className='min-h-screen'>
+        <div className='min-h-screen flex justify-around items-center'>
             <Head>
                 <title>Login</title>
             </Head>
-            <div className='w-1/2 mx-auto py-8 shadow-xl lg:mt-40'>
-                <div>
-                    <h3 className='text-3xl text-info font-serif font-semibold text-center my-8'>LOGIN</h3>
-                </div>
-                <div className='flex items-center justify-center space-x-5'>
-                    <div>
-                        <button>
-                            <FaGoogle className='text-[#3cba54] text-4xl' />
-                        </button>
-                    </div>
-                    <hr />
-                    <div>
-                        <button>
-                            <FaGithub className='text-4xl text-[#4078c0]' />
-                        </button>
-                    </div>
-                </div>
+            <div>
+                <Image src={loginImage} alt="loginImage" />
             </div>
+
+            <LoginForm />
         </div>
     );
 };
