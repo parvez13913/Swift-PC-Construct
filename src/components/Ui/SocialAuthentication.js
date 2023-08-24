@@ -6,6 +6,9 @@ const SocialAuthentication = () => {
         <div className='flex items-center justify-center space-x-10'>
             <FaGoogle
                 className='text-4xl link text-[#3cba54]'
+                onClick={() => signIn("google", {
+                    callbackUrl: "http://localhost:3000/"
+                })}
             />
             <FaGithub
                 className='text-4xl link text-[#171515]'
