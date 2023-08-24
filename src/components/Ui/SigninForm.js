@@ -10,10 +10,9 @@ const LoginForm = () => {
     };
 
     return (
-        <div>
+        <div className="border border-info shadow-lg mx-8 w-1/7 mb-8 rounded-lg px-9 py-4">
             <form
                 onSubmit={handleSubmit(onSubmit)}
-                className="border border-info shadow-lg mx-8 w-1/7 mb-8 rounded-lg px-9 py-4"
             >
                 <h6 className="text-center my-6 text-xl font-bold border-b-2 border-spacing-3 border-info">
                     Sign In
@@ -49,18 +48,23 @@ const LoginForm = () => {
                 )}
 
                 <button
-                    className="bg-blue-900 text-white p-2 rounded-lg w-full mt-2"
+                    className="btn btn-info btn-outline normal-case text-white p-2 rounded-lg w-full mt-2"
                     type="submit"
                 >
                     Sign In
                 </button>
-                {/* <p className="my-3 text-center">
-                    New to Bick Hero??{" "}
-                    <Link to="/signup" className="text-red-500">
+                <p className="my-3 text-center">
+                    New to Swift PC Construct??{" "}
+                    <Link href="/signup" className="text-red-500">
                         Please Signup
                     </Link>
-                </p> */}
+                </p>
             </form>
+            <div className="divider font-bold">OR</div>
+            <div className='flex items-center justify-center space-x-10'>
+                <FaGoogle className='text-4xl link text-[#3cba54]' />
+                <FaGithub className='text-4xl link text-[#171515]' />
+            </div>
         </div>
     );
 };
