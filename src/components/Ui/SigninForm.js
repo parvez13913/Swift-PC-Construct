@@ -1,7 +1,7 @@
 import Link from 'next/link';
-import { FaGoogle, FaGithub } from "react-icons/fa6";
 import React from 'react';
 import { useForm } from 'react-hook-form';
+import SocialAuthentication from './SocialAuthentication';
 
 const LoginForm = () => {
     const { register, handleSubmit, formState: { errors } } = useForm();
@@ -61,10 +61,7 @@ const LoginForm = () => {
                 </p>
             </form>
             <div className="divider font-bold">OR</div>
-            <div className='flex items-center justify-center space-x-10'>
-                <FaGoogle className='text-4xl link text-[#3cba54]' />
-                <FaGithub className='text-4xl link text-[#171515]' />
-            </div>
+            <SocialAuthentication />
         </div>
     );
 };

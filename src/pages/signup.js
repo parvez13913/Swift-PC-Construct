@@ -3,6 +3,7 @@ import React from 'react';
 import SignupForm from '../components/Ui/SignupForm';
 import Head from 'next/head';
 import signUpImage from '../images/signup.png';
+import RootLayout from '../components/shared/Layouts/RootLayout';
 
 const SignUpPage = () => {
     return (
@@ -20,3 +21,8 @@ const SignUpPage = () => {
 };
 
 export default SignUpPage;
+
+
+SignUpPage.getLayout = function getLayout(page) {
+    return <RootLayout>{page}</RootLayout>
+}

@@ -5,7 +5,7 @@ import SigninForm from '../components/Ui/SigninForm';
 import loginImage from '../images/login.png'
 import Image from 'next/image';
 
-const LoginPage = () => {
+const SigninPage = () => {
     return (
         <div className='min-h-screen flex justify-around items-center'>
             <Head>
@@ -20,9 +20,9 @@ const LoginPage = () => {
     );
 };
 
-export default LoginPage;
+export default SigninPage;
 
 
-LoginPage.getLayout = function getLayout(page) {
+SigninPage.getLayout = function getLayout(page) {
     return <RootLayout>{page}</RootLayout>
 }

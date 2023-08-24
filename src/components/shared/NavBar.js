@@ -1,7 +1,10 @@
 import Link from "next/link";
 import { BsDisplayFill } from "react-icons/bs";
+import { useSession, signOut } from "next-auth/react"
 
 const NavBar = () => {
+    const { data: session } = useSession();
+    console.log(session);
     return (
         <div className="navbar bg-neutral sticky top-0 border-b-2 border-info z-30 backdrop-blur bg-transparent shadow-lg">
             <div className="navbar-start">
@@ -55,10 +58,16 @@ const NavBar = () => {
                     <li><a>Item 3</a></li>
                 </ul>
             </div>
-            <div className="navbar-end">
+            <div className="navbar-end space-x-10">
                 <Link
                     href="/builder/pcbuilder"
-                    className="btn btn-info btn-outline normal-case ">PC Builder</Link>
+                    className="btn btn-info btn-outline normal-case ">PC Builder
+                </Link>
+                {
+                    session?.user ? <button className="btn btn-info btn-outline normal-case"
+                        onClick={() => signOut()}
+                    >Sign Out</button> : <Link href="/signin" className="btn btn-info btn-outline normal-case">Sign In</Link>
+                }
             </div>
         </div>
     );
