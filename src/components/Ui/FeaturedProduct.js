@@ -1,11 +1,10 @@
 /* eslint-disable @next/next/no-img-element */
 import Link from 'next/link';
-import React from 'react';
 
 const FeaturedProduct = ({ product }) => {
-    const { image, productName, category, price, status, rating } = product;
+    const { image, productName, category, price, status, rating, id } = product;
     return (
-        <Link href="/" className="card bg-base-100 shadow-xl flex flex-col border border-info my-8">
+        <Link href={`/productsDetails/${id}`} className="card bg-base-100 shadow-xl flex flex-col border border-info my-8">
             <figure>
                 <img
                     src={image}
