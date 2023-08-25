@@ -15,7 +15,7 @@ const FeaturedProduct = ({ product }) => {
             </figure>
             <div className="card-body">
                 <h2 className=" text-sm md:text-md lg:text-xl">
-                    {productName} <span className="badge badge-xs badge-warning">{category}</span>
+                    {productName} <span className="badge badge-xs badge-info">{category}</span>
                 </h2>
                 <p className="text-sm text-gray-400">Price: {price}</p>
                 <p className="text-sm text-gray-400">Status: {status}</p>
