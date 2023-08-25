@@ -1,0 +1,37 @@
+import React from 'react';
+import ChooseCard from '../../components/Ui/ChooseCard';
+import RootLayout from '../../components/shared/Layouts/RootLayout';
+
+const PowerSupplyPage = ({ cardProduct }) => {
+    return (
+        <div>
+            <h1 className='text-4xl text-center my-4 font-serif'>Choose <span className='text-info'>Power Supply</span></h1>
+
+            <div className='grid grid-cols-5 gap-4 px-4 mb-2 mt-6'>
+                {
+                    cardProduct.map(product => <ChooseCard key={product?.id} product={product} />)
+                }
+            </div>
+        </div>
+    );
+};
+
+export default PowerSupplyPage;
+
+PowerSupplyPage.getLayout = function getLayout(page) {
+    return <RootLayout>{page}</RootLayout>
+}
+
+
+export const getStaticProps = async () => {
+    const res = await fetch("http://localhost:5000/api/v1/products");
+    const products = await res.json();
+    const cardProduct = await products?.data?.filter((product) => product?.category === "PSU");
+
+    return {
+        props: {
+            cardProduct
+        },
+        revalidate: 30,
+    }
+}

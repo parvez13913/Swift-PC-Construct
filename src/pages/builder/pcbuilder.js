@@ -26,7 +26,7 @@ const PcBuilderPage = () => {
             id: "4",
             name: "Power Supply",
             categoryIcon: "https://i.ibb.co/6437v8V/psupply-svg.png",
-            category: 'powerSupply'
+            category: 'psu'
         },
         {
             id: "5",
