@@ -1,8 +1,19 @@
 /* eslint-disable @next/next/no-img-element */
-import React from 'react';
+
+import { useRouter } from "next/router";
+import { useDispatch } from "react-redux";
+import { selectComponent } from "../../redux/features/componentSlice";
 
 const ChooseCard = ({ product }) => {
-    const { productName, category, image, price, status, rating } = product
+    const { productName, category, image, price, status, rating } = product;
+    const dispatch = useDispatch();
+    const router = useRouter();
+
+    const handelAddToBuilder = (product) => {
+        dispatch(selectComponent(product));
+        router.push("/builder/pcbuilder");
+    }
+
     return (
         <div className="card bg-base-100 shadow-xl flex flex-col border border-info my-8">
             <figure>
@@ -22,7 +33,12 @@ const ChooseCard = ({ product }) => {
                 <p className="text-sm text-gray-400">Rating: {rating}</p>
             </div>
             <div className='mx-auto my-4'>
-                <button className='btn btn-info btn-outline normal-case'>Add To Builder</button>
+                <button
+                    className='btn btn-info btn-outline normal-case'
+                    onClick={() => handelAddToBuilder(product)}
+                >
+                    Add To Builder
+                </button>
             </div>
         </div >
     );

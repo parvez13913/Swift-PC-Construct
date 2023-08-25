@@ -1,6 +1,7 @@
+/* eslint-disable @next/next/no-img-element */
 import { useRouter } from "next/router";
 
-/* eslint-disable @next/next/no-img-element */
+
 const CategoryCard = ({ productcategory }) => {
     const { categoryIcon, name, category } = productcategory;
     const router = useRouter();
