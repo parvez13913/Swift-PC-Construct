@@ -4,7 +4,6 @@ import { useSession, signOut } from "next-auth/react"
 
 const NavBar = () => {
     const { data: session } = useSession();
-    console.log(session);
     return (
         <div className="navbar bg-neutral sticky top-0 border-b-2 border-info z-30 backdrop-blur bg-transparent shadow-lg">
             <div className="navbar-start">
@@ -32,7 +31,7 @@ const NavBar = () => {
                             <summary>Categories</summary>
                             <ul className="p-2">
                                 <li>
-                                    <a>CPU</a>
+                                    <Link href="/cpu">CPU</Link>
                                 </li>
                                 <li>
                                     <a>Motherboard</a>

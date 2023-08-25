@@ -1,6 +1,12 @@
+import { useRouter } from "next/router";
+
 /* eslint-disable @next/next/no-img-element */
-const CategoryCard = ({ category }) => {
-    const { categoryIcon, name } = category
+const CategoryCard = ({ productcategory }) => {
+    const { categoryIcon, name, category } = productcategory;
+    const router = useRouter();
+    const handelChooseButton = (category) => {
+        router.push(`/category/${category}`);
+    }
     return (
 
         <div className='flex justify-between p-4 my-3 shadow-lg'>
@@ -12,7 +18,10 @@ const CategoryCard = ({ category }) => {
             </div>
 
             <div>
-                <button className='btn btn-info btn-outline font-serif normal-case'>Choose</button>
+                <button
+                    className='btn btn-info btn-outline font-serif normal-case'
+                    onClick={() => handelChooseButton(category)}
+                >Choose</button>
             </div>
         </div>
 
