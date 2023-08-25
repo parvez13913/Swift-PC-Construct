@@ -40,6 +40,12 @@ const PcBuilderPage = () => {
             categoryIcon: "https://i.ibb.co/Tvbh6yb/hdd-svg.png",
             category: "storage",
         },
+        {
+            id: "7",
+            name: "Others",
+            categoryIcon: "https://i.ibb.co/FVDQpm7/keyboard-svg.png",
+            category: "others",
+        },
     ]
     return (
         <div>
