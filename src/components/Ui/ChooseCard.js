@@ -4,7 +4,7 @@ import React from 'react';
 const ChooseCard = ({ product }) => {
     const { productName, category, image, price, status, rating } = product
     return (
-        <div className="card bg-base-100 shadow-xl flex flex-col border border-info cursor-pointer my-8">
+        <div className="card bg-base-100 shadow-xl flex flex-col border border-info my-8">
             <figure>
                 <img
                     src={image}
