@@ -31,6 +31,6 @@ export const getStaticProps = async () => {
         props: {
             cardProduct
         },
-        revalidate: 10,
+        revalidate: 30,
     }
 }
