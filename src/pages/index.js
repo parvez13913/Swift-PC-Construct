@@ -10,7 +10,7 @@ const HomePage = ({ products, categories }) => {
       <Banner />
       <div>
         <h1 className="text-center text-3xl font-serif font-semibold mt-12">Our <span className="text-info">Products</span></h1>
-        <div className="grid grid-cols-6 gap-4 px-4">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-4 px-4">
           {
             products?.data?.map((product) => <FeaturedProduct key={product?.id} product={product} />)
           }
@@ -18,9 +18,10 @@ const HomePage = ({ products, categories }) => {
       </div>
 
       <div>
-        <h1 className="text-center text-3xl font-serif font-semibold mt-12">Featured <span className="text-info">Categories</span></h1>
+        <h1 className="text-center text-3xl font-serif font-semibold mt-12">Featured <span className="text-info">Categories</span>
+        </h1>
         {
-          <div className="px-4">
+          <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 my-8 lg:ml-14'>
             {
               categories?.data?.map((category) => <FeaturedCategories key={category?.id} category={category} />)
             }

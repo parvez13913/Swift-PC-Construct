@@ -53,7 +53,6 @@ const NavBar = () => {
             </div>
             <div className="navbar-center hidden lg:flex">
                 <ul className="menu menu-horizontal px-1">
-                    <li><a>Item 1</a></li>
                     <li tabIndex={0}>
                         <details>
                             <summary>Categories</summary>
@@ -83,7 +82,6 @@ const NavBar = () => {
                             </ul>
                         </details>
                     </li>
-                    <li><a>Item 3</a></li>
                 </ul>
             </div>
             <div className="navbar-end space-x-10">

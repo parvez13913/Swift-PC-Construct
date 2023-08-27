@@ -3,21 +3,18 @@ import Link from 'next/link';
 
 const FeaturedCategories = ({ category }) => {
     return (
-        <div className='flex justify-between p-4 my-3 shadow-lg'>
-            <div className='flex items-center space-x-8'>
-                <div>
-                    <img src={category?.categoryIcon} alt="category Icon" />
+        <Link
+            href={`/category/${category?.category}`}
+        >
+            <div className="card w-96 bg-base-100 shadow-xl image-full">
+                <figure>
+                    <img src={category?.categoryIcon} alt="Shoes" />
+                </figure>
+                <div className="card-body">
+                    <h2 className="text-center text-2xl font-serif font-semibold text-info">{category?.name}</h2>
                 </div>
-                <h1 className='font-serif'>{category?.name}</h1>
             </div>
-
-            <div>
-                <Link
-                    href={`/category/${category?.category}`}
-                    className='btn btn-info btn-outline font-serif normal-case'
-                >Choose</Link>
-            </div>
-        </div>
+        </Link>
 
     );
 };
