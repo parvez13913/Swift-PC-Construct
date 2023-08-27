@@ -22,7 +22,7 @@ OthersPage.getLayout = function getLayout(page) {
 }
 
 export const getStaticProps = async () => {
-    const res = await fetch("http://localhost:5000/api/v1/products");
+    const res = await fetch("https://swift-pc-construct-server.vercel.app/api/v1/products");
     const products = await res.json();
     const cardProduct = await products?.data?.filter((product) => product?.category === "Others");
 

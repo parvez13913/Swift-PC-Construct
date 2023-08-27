@@ -2,9 +2,9 @@
 import Link from 'next/link';
 
 const FeaturedProduct = ({ product }) => {
-    const { image, productName, category, price, status, averageRating, id } = product;
+    const { image, productName, category, price, status, averageRating, _id } = product;
     return (
-        <Link href={`/productsDetails/${id}`} className="card bg-base-100 shadow-xl flex flex-col border border-info my-8">
+        <Link href={`/productsDetails/${_id}`} className="card bg-base-100 shadow-xl flex flex-col border border-info my-8">
             <figure>
                 <img
                     src={image}

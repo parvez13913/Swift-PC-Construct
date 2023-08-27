@@ -8,7 +8,7 @@ import { useSelector } from "react-redux";
 const PcBuilderPage = ({ categories }) => {
     const products = useSelector((state) => state.component?.components);
     const handelCompleteBuild = () => {
-        swal("success!", "Upper computer build is complete. Please wait!", "success");
+        swal("success!", "Your computer build complete. Please wait!", "success");
     }
     return (
         <div>
@@ -46,7 +46,7 @@ PcBuilderPage.getLayout = function getLayout(page) {
 }
 
 export const getServerSideProps = async () => {
-    const res = await fetch(`http://localhost:5000/api/v1/categories`);
+    const res = await fetch(`https://swift-pc-construct-server.vercel.app/api/v1/categories`);
     const categories = await res.json();
 
     return {
