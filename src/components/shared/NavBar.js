@@ -17,26 +17,26 @@ const NavBar = () => {
                                 <summary>Categories</summary>
                                 <ul className="p-2">
                                     <li>
-                                        <Link href="/cpu">CPU</Link>
+                                        <Link href="/category/cpu">CPU</Link>
                                     </li>
                                     <li>
                                         <Link
-                                            href="motherboard">Motherboard</Link>
+                                            href="/category/motherboard">Motherboard</Link>
                                     </li>
                                     <li>
-                                        <Link href="/ram">RAM</Link>
+                                        <Link href="/category/ram">RAM</Link>
                                     </li>
                                     <li>
-                                        <Link href="/psu">Power Supply</Link>
+                                        <Link href="/category/psu">Power Supply</Link>
                                     </li>
                                     <li>
-                                        <Link href="/storage">Storage</Link>
+                                        <Link href="/category/storage">Storage</Link>
                                     </li>
                                     <li>
-                                        <Link href="/monitor">Monitor</Link>
+                                        <Link href="/category/monitor">Monitor</Link>
                                     </li>
                                     <li>
-                                        <Link href="/others">Others</Link>
+                                        <Link href="/category/others">Others</Link>
                                     </li>
                                 </ul>
                             </details>
@@ -59,26 +59,26 @@ const NavBar = () => {
                             <summary>Categories</summary>
                             <ul className="p-2">
                                 <li>
-                                    <Link href="/cpu">CPU</Link>
+                                    <Link href="/category/cpu">CPU</Link>
                                 </li>
                                 <li>
                                     <Link
-                                        href="motherboard">Motherboard</Link>
+                                        href="/category/motherboard">Motherboard</Link>
                                 </li>
                                 <li>
-                                    <Link href="/ram">RAM</Link>
+                                    <Link href="/category/ram">RAM</Link>
                                 </li>
                                 <li>
-                                    <Link href="/psu">Power Supply</Link>
+                                    <Link href="/category/psu">Power Supply</Link>
                                 </li>
                                 <li>
-                                    <Link href="/storage">Storage</Link>
+                                    <Link href="/category/storage">Storage</Link>
                                 </li>
                                 <li>
-                                    <Link href="/monitor">Monitor</Link>
+                                    <Link href="/category/monitor">Monitor</Link>
                                 </li>
                                 <li>
-                                    <Link href="/others">Others</Link>
+                                    <Link href="/category/others">Others</Link>
                                 </li>
                             </ul>
                         </details>
