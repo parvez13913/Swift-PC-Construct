@@ -20,11 +20,14 @@ const componentSlice = createSlice({
             else {
                 state.components.push({ ...action.payload, quantity: 1 });
             }
+        },
+        removeFromComponent: (state, action) => {
+            state.components = state.components.filter(component => component._id !== action.payload._id);
         }
     }
 })
 
 
-export const { selectComponent } = componentSlice.actions;
+export const { selectComponent, removeFromComponent } = componentSlice.actions;
 
 export default componentSlice.reducer;
