@@ -12,7 +12,14 @@ const componentSlice = createSlice({
     initialState,
     reducers: {
         selectComponent: (state, action) => {
-            state.components.push(action.payload);
+            const existing = state.components.find(component => component?._id === action?._id);
+            if (existing) {
+
+            }
+            else {
+                state.components.push({ ...action.payload, quantity: 1 });
+            }
+
         }
     }
 })

@@ -2,7 +2,7 @@
 import Link from 'next/link';
 
 const FeaturedProduct = ({ product }) => {
-    const { image, productName, category, price, status, rating, id } = product;
+    const { image, productName, category, price, status, averageRating, id } = product;
     return (
         <Link href={`/productsDetails/${id}`} className="card bg-base-100 shadow-xl flex flex-col border border-info my-8">
             <figure>
@@ -19,7 +19,7 @@ const FeaturedProduct = ({ product }) => {
                 </h2>
                 <p className="text-sm text-gray-400">Price: {price}</p>
                 <p className="text-sm text-gray-400">Status: {status}</p>
-                <p className="text-sm text-gray-400">Rating: {rating}</p>
+                <p className="text-sm text-gray-400">Rating: {averageRating}</p>
             </div>
         </Link >
     );

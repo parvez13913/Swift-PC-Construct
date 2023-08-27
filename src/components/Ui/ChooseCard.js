@@ -5,7 +5,7 @@ import { useDispatch } from "react-redux";
 import { selectComponent } from "../../redux/features/componentSlice";
 
 const ChooseCard = ({ product }) => {
-    const { productName, category, image, price, status, rating } = product;
+    const { productName, category, image, price, status, averageRating } = product;
     const dispatch = useDispatch();
     const router = useRouter();
 
@@ -30,7 +30,7 @@ const ChooseCard = ({ product }) => {
                 </h2>
                 <p className="text-sm text-gray-400">Price: {price}</p>
                 <p className="text-sm text-gray-400">Status: {status}</p>
-                <p className="text-sm text-gray-400">Rating: {rating}</p>
+                <p className="text-sm text-gray-400">Rating: {averageRating}</p>
             </div>
             <div className='mx-auto my-4'>
                 <button
