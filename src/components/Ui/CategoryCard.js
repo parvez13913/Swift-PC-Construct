@@ -7,7 +7,7 @@ const CategoryCard = ({ productcategory }) => {
     const router = useRouter();
     const handelChooseButton = (category) => {
         router.push(`/category/${category}`);
-    }
+    };
     return (
 
         <div className='flex justify-between p-4 my-3 shadow-lg'>
