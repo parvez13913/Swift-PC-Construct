@@ -2,11 +2,11 @@
 import RootLayout from "../../components/shared/Layouts/RootLayout";
 
 const ProductsDetailsPage = ({ product }) => {
-    const { image, rating, status, category, productName, price } = product?.data;
+    const { image, productName, category, price, status, averageRating, keyFeatures, reviews, description } = product?.data;
     return (
-        <div>
+        <div className="my-8">
             <div className="flex justify-center font-serif">
-                <div className="card lg:card-side bg-base-100 shadow-xl mt-8  p-4 border border-info">
+                <div className="card lg:card-side bg-base-100 shadow-xl my-4 p-4 border border-info">
                     <figure>
                         <img
                             style={{ aspectRatio: "300 / 200" }}
@@ -16,15 +16,23 @@ const ProductsDetailsPage = ({ product }) => {
                         />
                     </figure>
                     <div className="card-body">
-                        <h2 className="card-title">Product Name: {productName}</h2>
-                        <div className="flex items-center space-x-8">
-                            <h2 className="badge badge-info">category: {category}</h2>
-                            <h2 className="badge badge-info">Price: {price}</h2>
-                            <h2 className="badge badge-info">Status: {status}</h2>
-                            <h2 className="badge badge-info">Rating: {rating}</h2>
+                        <h2 className="card-title text-info">{productName}</h2>
+                        <h2 className="badge badge-info">category: {category}</h2>
+                        <h2 className="badge badge-info">Price: {price}</h2>
+                        <h2 className="badge badge-info">Status: {status}</h2>
+                        <h2 className="badge badge-info">Average Rating: {averageRating}</h2>
+                        <div className="space-x-7">
+                            <h2 className="badge badge-info">Model: {keyFeatures[0]?.model}</h2>
+                            <h2 className="badge badge-info">Brand: {keyFeatures[0]?.brand}</h2>
+                            <h2 className="badge badge-info">Type: {keyFeatures[0]?.type}</h2>
                         </div>
+                        <h2 className="badge badge-info">Reviews: {reviews.length}</h2>
                     </div>
                 </div>
+            </div>
+            <div className="shadow-xl my-4 p-4 border border-info w-9/12 mx-auto">
+                <h1 className="text-info text-2xl py-2 font-serif font-semibold">Description</h1>
+                <p>{description}</p>
             </div>
         </div>
     );
