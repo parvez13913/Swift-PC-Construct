@@ -1,9 +1,13 @@
 import Link from "next/link";
 import { BsDisplayFill } from "react-icons/bs";
 import { useSession, signOut } from "next-auth/react"
+import { useAuthState } from "react-firebase-hooks/auth";
+import auth from "../../firebase/firebase.config";
 
 const NavBar = () => {
     const { data: session } = useSession();
+    const { user } = useAuthState(auth);
+    const isAuthenticated = session?.user || user;
     return (
         <div className="navbar bg-neutral sticky top-0 border-b-2 border-info z-30 backdrop-blur bg-transparent shadow-lg">
             <div className="navbar-start">
@@ -90,7 +94,7 @@ const NavBar = () => {
                     className="btn btn-info btn-outline normal-case ">PC Builder
                 </Link>
                 {
-                    session?.user ? <button className="btn btn-info btn-outline normal-case"
+                    isAuthenticated ? <button className="btn btn-info btn-outline normal-case"
                         onClick={() => signOut()}
                     >Sign Out</button> : <Link href="/signin" className="btn btn-info btn-outline normal-case">Sign In</Link>
                 }

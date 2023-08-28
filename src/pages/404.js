@@ -7,8 +7,8 @@ import Link from "next/link";
 const NotFoundPage = () => {
   const router = useRouter()
   setTimeout(() => {
-    router.push("/")
-  }, 5000)
+    router.push("/");
+  }, 5000);
   return (
     <div className="text-center">
       <Head>
