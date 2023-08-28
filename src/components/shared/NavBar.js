@@ -50,7 +50,7 @@ const NavBar = () => {
 
                 <Link
                     href="/"
-                    className="btn btn-info btn-outline normal-case text-xl">
+                    className="btn btn-info btn-outline normal-case text-xl hidden lg:flex">
                     <BsDisplayFill />
                     Swift PC Construct
                 </Link>
