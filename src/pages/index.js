@@ -1,3 +1,4 @@
+import Head from "next/head";
 import Banner from "../components/Ui/Banner";
 import FeaturedCategories from "../components/Ui/FeaturedCategories";
 import FeaturedProduct from "../components/Ui/FeaturedProduct";
@@ -7,6 +8,9 @@ import RootLayout from "../components/shared/Layouts/RootLayout";
 const HomePage = ({ products, categories }) => {
   return (
     <div>
+      <Head>
+        <title>Home Page</title>
+      </Head>
       <Banner />
       <div>
         <h1 className="text-center text-3xl font-serif font-semibold mt-12">Our <span className="text-info">Products</span></h1>
