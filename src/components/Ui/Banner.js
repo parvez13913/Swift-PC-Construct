@@ -4,9 +4,9 @@ import bannerImage from '../../images/banner.png';
 
 const Banner = () => {
     return (
-        <div className='flex items-center p-4'>
+        <div className='text-center lg:flex items-center p-4'>
             <div>
-                <Image className='w-11/12' src={bannerImage} alt='' />
+                <Image className='lg:w-11/12' src={bannerImage} alt='' />
             </div>
             <div>
                 <h1 className='text-4xl font-semibold font-serif mb-3'>

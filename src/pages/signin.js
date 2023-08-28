@@ -7,7 +7,7 @@ import Image from 'next/image';
 
 const SigninPage = () => {
     return (
-        <div className='min-h-screen flex justify-around items-center'>
+        <div className='lg:min-h-screen lg:flex justify-around items-center'>
             <Head>
                 <title>Sign in</title>
             </Head>
